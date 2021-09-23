@@ -11,7 +11,7 @@ import (
 func TestExecuteAction(t *testing.T) {
 	store := repository.CreateNewStore()
 
-	file, err := logging.SetupLogging("coordinator_test")
+	file, err := logging.SetupLogging("coordinator_test", logging.LogToConsole)
 	if err != nil {
 		log.Fatal(err)
 	}

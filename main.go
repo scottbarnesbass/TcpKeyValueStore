@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	file, err := logging.SetupLogging("tcpKeyValueStore")
+	file, err := logging.SetupLogging("tcpKeyValueStore", logging.LogToFile)
 	if err != nil {
 		log.Fatal(err)
 	}
