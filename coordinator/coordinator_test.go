@@ -3,14 +3,14 @@ package coordinator
 import (
 	"TcpKeyValueStore/globals"
 	"TcpKeyValueStore/logging"
-	"TcpKeyValueStore/storeRepo"
+	"TcpKeyValueStore/repository"
 	"log"
 	"testing"
 )
 
 func TestExecuteAction(t *testing.T) {
-	storeRepo.Open()
-	defer storeRepo.Close()
+	store := repository.CreateNewStore()
+
 	file, err := logging.SetupLogging("coordinator_test")
 	if err != nil {
 		log.Fatal(err)
@@ -23,7 +23,7 @@ func TestExecuteAction(t *testing.T) {
 		method := globals.RequestMethodPut
 		arguments := []string{ key, value }
 
-		if result, err := ExecuteAction(method, arguments); err != nil {
+		if result, err := ExecuteAction(store, method, arguments); err != nil {
 			t.Error("should not have thrown error", err)
 		} else if result != "ack" {
 			t.Error("incorrect result returned, expected ack but got", result)
@@ -34,7 +34,7 @@ func TestExecuteAction(t *testing.T) {
 		arguments := []string{ key }
 		expectedResult := "thing"
 
-		if result, err := ExecuteAction(method, arguments); err != nil {
+		if result, err := ExecuteAction(store, method, arguments); err != nil {
 			t.Error("should not have thrown error", err)
 		}else if result != expectedResult {
 			t.Error("incorrect result returned,", expectedResult, "but got", result)
@@ -45,7 +45,7 @@ func TestExecuteAction(t *testing.T) {
 		arguments := []string{ key }
 		expectedResult := "ack"
 
-		if result, err := ExecuteAction(method, arguments); err != nil {
+		if result, err := ExecuteAction(store, method, arguments); err != nil {
 			t.Error("should not have thrown error", err)
 		} else if result != expectedResult {
 			t.Error("incorrect result returned,", expectedResult, "but got", result)
@@ -56,7 +56,7 @@ func TestExecuteAction(t *testing.T) {
 		arguments := []string{ key }
 		expectedResult := "ack"
 
-		if result, err := ExecuteAction(method, arguments); err != nil {
+		if result, err := ExecuteAction(store, method, arguments); err != nil {
 			t.Error("should not have thrown error", err)
 		}else if result != expectedResult {
 			t.Error("incorrect result returned,", expectedResult, "but got", result)
@@ -67,9 +67,9 @@ func TestExecuteAction(t *testing.T) {
 		arguments := []string{ key }
 		expectedResult := "nil"
 
-		if result, err := ExecuteAction(method, arguments); err == nil {
+		if result, err := ExecuteAction(store, method, arguments); err == nil {
 			t.Error("should have thrown error")
-		} else if err != storeRepo.ErrKeyNotFound {
+		} else if err != repository.ErrKeyNotFound {
 			t.Error(`should have thrown "ErrKeyNotFound" error, but got`, err)
 		} else if result != expectedResult {
 			t.Error("incorrect result returned,", expectedResult, "but got", result)

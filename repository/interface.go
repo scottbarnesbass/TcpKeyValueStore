@@ -1,10 +1,14 @@
 package repository
 
-import "time"
+import (
+	"errors"
+	"time"
+)
 
-//import (
-//	"TcpKeyValueStore/storeRepo"
-//)
+var (
+	ErrKeyNotFound = errors.New("key not found")
+	ErrNilStore = errors.New("store has not been initialised correctly, nil store")
+)
 
 type Key string
 

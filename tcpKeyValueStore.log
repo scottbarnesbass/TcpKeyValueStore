@@ -1,22 +1,68 @@
-INFO: 2021/09/23 10:44:04 TcpKeyValueStore.go:18: Opening repo
-INFO: 2021/09/23 10:44:04 TcpKeyValueStore.go:22: Starting client
-INFO: 2021/09/23 10:44:04 server.go:15: opening listener
-INFO: 2021/09/23 10:44:04 server.go:27: Accepting
-INFO: 2021/09/23 10:44:08 server.go:35: Handled
-INFO: 2021/09/23 10:44:08 server.go:27: Accepting
-INFO: 2021/09/23 10:44:08 server.go:41: Handling connection
-INFO: 2021/09/23 10:44:08 coordinator.go:17: [Put value executed for method : put arguments : [k v]]
-INFO: 2021/09/23 10:44:08 coordinator.go:30: [Get by key executed for method : get , arguments : [k] , response : v]
-ERROR: 2021/09/23 10:44:08 coordinator.go:22: [Failed to execute method : get arguments : [v] key not found]
-ERROR: 2021/09/23 10:44:08 server.go:60: strconv.Atoi: parsing "1v": invalid syntax
-INFO: 2021/09/23 10:44:08 coordinator.go:36: [Deleting by key executed without error for method  del arguments : [k]]
-ERROR: 2021/09/23 10:44:08 coordinator.go:22: [Failed to execute method : get arguments : [k] key not found]
-ERROR: 2021/09/23 10:44:08 server.go:45: EOF
-INFO: 2021/09/23 10:44:08 server.go:35: Handled
-INFO: 2021/09/23 10:44:08 server.go:27: Accepting
-INFO: 2021/09/23 10:44:08 server.go:41: Handling connection
-INFO: 2021/09/23 10:44:08 coordinator.go:36: [Deleting by key executed without error for method  del arguments : [v]]
-INFO: 2021/09/23 10:44:08 coordinator.go:17: [Put value executed for method : put arguments : [an expert from lorem ipsum Lorem ipsum dolor sit ]
-INFO: 2021/09/23 10:44:08 coordinator.go:30: [Get by key executed for method : get , arguments : [an expert from lorem ipsum] , response : Lorem ipsum dolor sit amet, consectetur adipiscing]
-INFO: 2021/09/23 10:44:08 coordinator.go:36: [Deleting by key executed without error for method  del arguments : [an expert from lorem ipsum]]
-INFO: 2021/09/23 10:44:08 server.go:50: Bye request received
+INFO: 2021/09/23 14:25:35 main.go:18: Opening repo
+INFO: 2021/09/23 14:25:35 main.go:21: Starting client
+INFO: 2021/09/23 14:25:35 server.go:16: opening listener
+INFO: 2021/09/23 14:25:35 server.go:30: Accepting
+INFO: 2021/09/23 14:25:42 server.go:38: Handled
+INFO: 2021/09/23 14:25:42 server.go:30: Accepting
+INFO: 2021/09/23 14:25:42 server.go:44: Handling connection
+INFO: 2021/09/23 14:27:10 main.go:18: Opening repo
+INFO: 2021/09/23 14:27:10 main.go:21: Starting client
+INFO: 2021/09/23 14:27:10 server.go:16: opening listener
+INFO: 2021/09/23 14:27:10 server.go:30: Accepting
+INFO: 2021/09/23 14:27:27 server.go:38: Handled
+INFO: 2021/09/23 14:27:27 server.go:30: Accepting
+INFO: 2021/09/23 14:27:27 server.go:44: Handling connection
+INFO: 2021/09/23 14:27:27 server.go:46: here
+INFO: 2021/09/23 14:27:27 server.go:53: here
+INFO: 2021/09/23 14:27:27 server.go:58: here
+INFO: 2021/09/23 14:27:27 server.go:65: here
+INFO: 2021/09/23 14:27:27 server.go:70: here
+INFO: 2021/09/23 14:27:27 server.go:75: here
+INFO: 2021/09/23 14:30:08 main.go:18: Opening repo
+INFO: 2021/09/23 14:30:08 main.go:21: Starting client
+INFO: 2021/09/23 14:30:08 server.go:16: opening listener
+INFO: 2021/09/23 14:30:08 server.go:30: Accepting
+INFO: 2021/09/23 14:32:33 main.go:18: Opening repo
+INFO: 2021/09/23 14:32:33 main.go:21: Starting client
+INFO: 2021/09/23 14:32:33 server.go:16: opening listener
+INFO: 2021/09/23 14:32:33 server.go:30: Accepting
+INFO: 2021/09/23 14:32:39 server.go:38: Handled
+INFO: 2021/09/23 14:32:39 server.go:30: Accepting
+INFO: 2021/09/23 14:32:39 server.go:44: Handling connection
+INFO: 2021/09/23 14:32:39 coordinator.go:18: [Put value executed for method : put arguments : [k v]]
+INFO: 2021/09/23 14:32:39 coordinator.go:34: [Get by key executed for method : get , arguments : [k] , response : v]
+ERROR: 2021/09/23 14:32:39 coordinator.go:24: [Failed to execute method : get arguments : [v] key not found]
+ERROR: 2021/09/23 14:32:39 server.go:63: strconv.Atoi: parsing "1v": invalid syntax
+INFO: 2021/09/23 14:32:39 coordinator.go:41: [Deleting by key executed without error for method  del arguments : [k]]
+ERROR: 2021/09/23 14:32:39 coordinator.go:24: [Failed to execute method : get arguments : [k] key not found]
+ERROR: 2021/09/23 14:32:39 server.go:48: EOF
+INFO: 2021/09/23 14:32:39 server.go:38: Handled
+INFO: 2021/09/23 14:32:39 server.go:30: Accepting
+INFO: 2021/09/23 14:32:39 server.go:44: Handling connection
+INFO: 2021/09/23 14:32:39 coordinator.go:41: [Deleting by key executed without error for method  del arguments : [v]]
+INFO: 2021/09/23 14:32:39 coordinator.go:18: [Put value executed for method : put arguments : [an expert from lorem ipsum Lorem ipsum dolor sit ]
+INFO: 2021/09/23 14:32:39 coordinator.go:34: [Get by key executed for method : get , arguments : [an expert from lorem ipsum] , response : Lorem ipsum dolor sit amet, consectetur adipiscing]
+INFO: 2021/09/23 14:32:39 coordinator.go:41: [Deleting by key executed without error for method  del arguments : [an expert from lorem ipsum]]
+INFO: 2021/09/23 14:32:39 server.go:53: Bye request received
+INFO: 2021/09/23 16:15:52 main.go:18: Opening repo
+INFO: 2021/09/23 16:15:52 main.go:21: Starting client
+INFO: 2021/09/23 16:15:52 server.go:16: opening listener
+INFO: 2021/09/23 16:15:52 server.go:30: Accepting
+INFO: 2021/09/23 16:15:56 server.go:38: Handled
+INFO: 2021/09/23 16:15:56 server.go:30: Accepting
+INFO: 2021/09/23 16:15:56 server.go:44: Handling connection
+INFO: 2021/09/23 16:15:56 coordinator.go:18: [Put value executed for method : put arguments : [k v]]
+INFO: 2021/09/23 16:15:56 coordinator.go:34: [Get by key executed for method : get , arguments : [k] , response : v]
+ERROR: 2021/09/23 16:15:56 coordinator.go:24: [Failed to execute method : get arguments : [v] key not found]
+ERROR: 2021/09/23 16:15:56 server.go:63: strconv.Atoi: parsing "1v": invalid syntax
+INFO: 2021/09/23 16:15:56 coordinator.go:41: [Deleting by key executed without error for method  del arguments : [k]]
+ERROR: 2021/09/23 16:15:56 coordinator.go:24: [Failed to execute method : get arguments : [k] key not found]
+ERROR: 2021/09/23 16:15:56 server.go:48: EOF
+INFO: 2021/09/23 16:15:56 server.go:38: Handled
+INFO: 2021/09/23 16:15:56 server.go:30: Accepting
+INFO: 2021/09/23 16:15:56 server.go:44: Handling connection
+INFO: 2021/09/23 16:15:56 coordinator.go:41: [Deleting by key executed without error for method  del arguments : [v]]
+INFO: 2021/09/23 16:15:56 coordinator.go:18: [Put value executed for method : put arguments : [an expert from lorem ipsum Lorem ipsum dolor sit ]
+INFO: 2021/09/23 16:15:56 coordinator.go:34: [Get by key executed for method : get , arguments : [an expert from lorem ipsum] , response : Lorem ipsum dolor sit amet, consectetur adipiscing]
+INFO: 2021/09/23 16:15:56 coordinator.go:41: [Deleting by key executed without error for method  del arguments : [an expert from lorem ipsum]]
+INFO: 2021/09/23 16:15:56 server.go:53: Bye request received
