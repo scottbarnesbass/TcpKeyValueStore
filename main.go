@@ -2,7 +2,7 @@ package main
 
 import (
 	"TcpKeyValueStore/logging"
-	"TcpKeyValueStore/storeRepo"
+	"TcpKeyValueStore/repository"
 	"TcpKeyValueStore/tcp"
 	"log"
 )
@@ -16,10 +16,9 @@ func main() {
 	defer file.Close()
 
 	logging.InfoLogger.Println("Opening repo")
-	storeRepo.Open()
-	defer storeRepo.Close()
+	storeRepo := repository.CreateNewStore()
 
 	logging.InfoLogger.Println("Starting client")
-	tcp.Run()
+	tcp.Run(storeRepo)
 }
 

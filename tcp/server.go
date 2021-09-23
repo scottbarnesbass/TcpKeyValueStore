@@ -6,11 +6,12 @@ import (
 	"TcpKeyValueStore/fomatting/responseFormatting"
 	"TcpKeyValueStore/globals"
 	"TcpKeyValueStore/logging"
+	"TcpKeyValueStore/repository"
 	"fmt"
 	"net"
 )
 
-func Run() {
+func Run(repo repository.Repo) {
 
 	logging.InfoLogger.Println("opening listener")
 	listener, err := net.Listen("tcp4", ":1234")
@@ -23,6 +24,8 @@ func Run() {
 		logging.InfoLogger.Println("listener closed")
 	}()
 
+
+
 	for {
 		logging.InfoLogger.Println("Accepting")
 		conn, err := listener.Accept()
@@ -31,18 +34,12 @@ func Run() {
 			continue
 		}
 
-		go handle(conn)
-		//shouldHangUp := handle(conn)
+		go handle(conn, repo)
 		logging.InfoLogger.Println("Handled")
-
-		//if shouldHangUp {
-		//	logging.InfoLogger.Println("Hang up response received. I'm hanging up now.")
-		//	break
-		//}
 	}
 }
 
-func handle(conn net.Conn) {
+func handle(conn net.Conn, repo repository.Repo) {
 	defer conn.Close()
 	logging.InfoLogger.Println("Handling connection")
 	for {
@@ -70,7 +67,7 @@ func handle(conn net.Conn) {
 				logging.ErrorLogger.Println("too few arguments to complete request")
 				conn.Write([]byte("err"))
 			} else {
-				responseString, err := coordinator.ExecuteAction(method, arguments)
+				responseString, err := coordinator.ExecuteAction(repo, method, arguments)
 				conn.Write(responseFormatting.FormatResponse(method, responseString, err))
 			}
 		}
