@@ -1,0 +1,22 @@
+INFO: 2021/09/23 10:44:04 TcpKeyValueStore.go:18: Opening repo
+INFO: 2021/09/23 10:44:04 TcpKeyValueStore.go:22: Starting client
+INFO: 2021/09/23 10:44:04 server.go:15: opening listener
+INFO: 2021/09/23 10:44:04 server.go:27: Accepting
+INFO: 2021/09/23 10:44:08 server.go:35: Handled
+INFO: 2021/09/23 10:44:08 server.go:27: Accepting
+INFO: 2021/09/23 10:44:08 server.go:41: Handling connection
+INFO: 2021/09/23 10:44:08 coordinator.go:17: [Put value executed for method : put arguments : [k v]]
+INFO: 2021/09/23 10:44:08 coordinator.go:30: [Get by key executed for method : get , arguments : [k] , response : v]
+ERROR: 2021/09/23 10:44:08 coordinator.go:22: [Failed to execute method : get arguments : [v] key not found]
+ERROR: 2021/09/23 10:44:08 server.go:60: strconv.Atoi: parsing "1v": invalid syntax
+INFO: 2021/09/23 10:44:08 coordinator.go:36: [Deleting by key executed without error for method  del arguments : [k]]
+ERROR: 2021/09/23 10:44:08 coordinator.go:22: [Failed to execute method : get arguments : [k] key not found]
+ERROR: 2021/09/23 10:44:08 server.go:45: EOF
+INFO: 2021/09/23 10:44:08 server.go:35: Handled
+INFO: 2021/09/23 10:44:08 server.go:27: Accepting
+INFO: 2021/09/23 10:44:08 server.go:41: Handling connection
+INFO: 2021/09/23 10:44:08 coordinator.go:36: [Deleting by key executed without error for method  del arguments : [v]]
+INFO: 2021/09/23 10:44:08 coordinator.go:17: [Put value executed for method : put arguments : [an expert from lorem ipsum Lorem ipsum dolor sit ]
+INFO: 2021/09/23 10:44:08 coordinator.go:30: [Get by key executed for method : get , arguments : [an expert from lorem ipsum] , response : Lorem ipsum dolor sit amet, consectetur adipiscing]
+INFO: 2021/09/23 10:44:08 coordinator.go:36: [Deleting by key executed without error for method  del arguments : [an expert from lorem ipsum]]
+INFO: 2021/09/23 10:44:08 server.go:50: Bye request received
